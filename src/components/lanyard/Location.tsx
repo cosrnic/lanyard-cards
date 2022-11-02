@@ -11,7 +11,7 @@ export const Location: FC<LanyardType> = ({ id }) => {
         if (!status || !status.kv?.location) {
             return <></>;
         } else {
-            if (status.kv.location == "London, UK") {
+            if (status.kv.location == "UK" || status.kv.location == "united kingdom" || status.kv.location == "great britain") {
                 return (
                     <h1 className="font-sans antialiased font-semibold text-lg text-center align-center ">
                         <img
