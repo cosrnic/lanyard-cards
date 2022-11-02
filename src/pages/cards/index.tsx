@@ -1,6 +1,7 @@
 import { Card } from "@/components/Card";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
+import defaultSRC from "@/utils/defaultSRC";
 import { getAvatarURL } from "@/utils/getAvatarURL";
 import type { NextPage } from "next";
 import Head from "next/head";
@@ -43,6 +44,7 @@ const Cards: NextPage = () => {
                     type="image/png"
                     sizes="16x16"
                     href={getAvatarURL("508662064063971348")}
+                    onError={(e) => defaultSRC(e)}
                 />
             </Head>
             <Navbar />

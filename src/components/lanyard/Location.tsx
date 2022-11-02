@@ -1,17 +1,19 @@
+import defaultSRC from "@/utils/defaultSRC";
 import { FC } from "react";
 import { useLanyard } from "react-use-lanyard";
 import { LanyardType } from "../../utils/lanyardType";
 
 export const Location: FC<LanyardType> = ({ id }) => {
     const { status } = useLanyard({ userId: id, socket: true });
-    function defaultSRC(e: any) {
-        e.target.src = "/images/discord-default.png";
-    }
     const getLocation = () => {
         if (!status || !status.kv?.location) {
             return <></>;
         } else {
-            if (status.kv.location == "UK" || status.kv.location == "united kingdom" || status.kv.location == "great britain") {
+            if (
+                status.kv.location == "UK" ||
+                status.kv.location == "united kingdom" ||
+                status.kv.location == "great britain"
+            ) {
                 return (
                     <h1 className="font-sans antialiased font-semibold text-lg text-center align-center ">
                         <img
