@@ -4,6 +4,7 @@ export const Footer = () => {
             <p>
                 Lanyard by{" "}
                 <a
+                    rel="noreferrer"
                     className="text-lanyard hover:underline transition-all duration-300 ease-linear"
                     href="https://github.com/Phineas"
                     target="_blank"
@@ -14,6 +15,7 @@ export const Footer = () => {
             <p>
                 Website by{" "}
                 <a
+                    rel="noreferrer"
                     className="text-lanyard hover:underline transition-all duration-300 ease-linear"
                     href="https://github.com/cosrnic"
                     target="_blank"

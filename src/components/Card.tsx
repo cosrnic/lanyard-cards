@@ -26,6 +26,7 @@ export const Card: FC<LanyardType> = ({ id, colour }) => {
                 <p className="text-lg font-semibold">
                     Make sure to follow{" "}
                     <a
+                        rel="noreferrer"
                         className="text-lanyard hover:underline transition-all duration-300 ease-linear"
                         href="../#how-to-use"
                     >
@@ -34,6 +35,7 @@ export const Card: FC<LanyardType> = ({ id, colour }) => {
                     .
                 </p>
                 <a
+                    rel="noreferrer"
                     href="/"
                     className="bg-lanyard px-12 py-4 rounded-full text-2xl font-bold text-center mt-12 hover:bg-lanyard/70 transition-all duration-100 ease-linear"
                 >

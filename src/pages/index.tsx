@@ -3,6 +3,7 @@ import { Navbar } from "@/components/Navbar";
 import { getAvatarURL } from "@/utils/getAvatarURL";
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import React from "react";
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 import { Card } from "../components/Card";
@@ -45,6 +46,7 @@ const Home: NextPage = () => {
                     <p className="text-3xl font-bold pt-4">
                         a{" "}
                         <a
+                            rel="noreferrer"
                             href="https://github.com/Phineas/lanyard"
                             target="_blank"
                             className="text-lanyard hover:underline transition-all duration-300 ease-linear"
@@ -54,6 +56,7 @@ const Home: NextPage = () => {
                         card generator
                     </p>
                     <a
+                        rel="noreferrer"
                         href="/cards"
                         className="m-8 p-4 text-xl font-bold bg-lanyard rounded-full hover:bg-lanyard/70"
                     >
@@ -62,6 +65,7 @@ const Home: NextPage = () => {
                 </div>
                 <div className="w-full flex flex-col justify-center items-center">
                     <a
+                        rel="noreferrer"
                         href="#what-it-looks-like"
                         className="flex bottom-4 p-2 px-4 bg-lanyard hover:bg-lanyard/70 transition-all duration-100 ease-linear text-white text-center font-bold rounded-full items-center"
                     >
@@ -78,6 +82,7 @@ const Home: NextPage = () => {
                 </div>
                 <div className="w-full flex flex-col justify-center items-center">
                     <a
+                        rel="noreferrer"
                         href="#how-to-use"
                         className="flex bottom-4 p-2 px-4 bg-lanyard hover:bg-lanyard/70 transition-all duration-100 ease-linear text-white text-center font-bold rounded-full items-center"
                     >
@@ -92,6 +97,7 @@ const Home: NextPage = () => {
                     <div className="text-lg font-medium text-center">
                         Firstly, Join the{" "}
                         <a
+                            rel="noreferrer"
                             className="text-lanyard hover:underline transition-all duration-300 ease-linear"
                             target="_blank"
                             href="https://discord.gg/lanyard "
@@ -103,6 +109,7 @@ const Home: NextPage = () => {
                     <p className="text-lg font-medium text-center">
                         Secondly,{" "}
                         <a
+                            rel="noreferrer"
                             href="/card"
                             className="text-lanyard hover:underline transition-all duration-300 ease-linear"
                         >
@@ -116,6 +123,7 @@ const Home: NextPage = () => {
                     <p className="text-lg font-medium text-center">
                         In the{" "}
                         <a
+                            rel="noreferrer"
                             className="text-lanyard hover:underline transition-all duration-300 ease-linear"
                             target="_blank"
                             href="https://discord.gg/lanyard "
@@ -144,6 +152,7 @@ const Home: NextPage = () => {
                 </div>
                 <div className="w-full flex flex-col justify-center items-center">
                     <a
+                        rel="noreferrer"
                         href="#what-s-coming"
                         className="flex bottom-4 p-2 px-4  lg:mt-0 bg-lanyard hover:bg-lanyard/70 transition-all duration-100 ease-linear text-white text-center font-bold rounded-full items-center"
                     >
@@ -171,6 +180,7 @@ const Home: NextPage = () => {
                 </div>
                 <div className="w-full flex flex-col justify-center items-center">
                     <a
+                        rel="noreferrer"
                         href="#"
                         className="flex bottom-4 p-2 px-4  lg:mt-0 bg-lanyard hover:bg-lanyard/70 transition-all duration-100 ease-linear text-white text-center font-bold rounded-full items-center"
                     >

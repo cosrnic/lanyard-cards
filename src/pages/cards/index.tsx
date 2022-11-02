@@ -5,6 +5,7 @@ import defaultSRC from "@/utils/defaultSRC";
 import { getAvatarURL } from "@/utils/getAvatarURL";
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import Router from "next/router";
 import React from "react";
 import { useState } from "react";
@@ -73,6 +74,7 @@ const Cards: NextPage = () => {
                     <p className="text-3xl font-bold pt-4">
                         a{" "}
                         <a
+                            rel="noreferrer"
                             href="https://github.com/Phineas/lanyard"
                             target="_blank"
                             className="text-lanyard hover:underline transition-all duration-300 ease-linear"
