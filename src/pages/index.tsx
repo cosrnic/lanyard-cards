@@ -110,7 +110,7 @@ const Home: NextPage = () => {
                         Secondly,{" "}
                         <a
                             rel="noreferrer"
-                            href="/card"
+                            href="/cards"
                             className="text-lanyard hover:underline transition-all duration-300 ease-linear"
                         >
                             click here
