@@ -56,7 +56,7 @@ const Home: NextPage = () => {
                 <div className="flex justify-center items-center flex-col h-[90%]">
                     <p className="text-4xl p-4">What it looks like</p>
                     <Card id="508662064063971348" />
-                    <p>updates in real time</p>
+                    <p className="italic">updates in real time</p>
                 </div>
                 <div className="w-full flex flex-col justify-center items-center">
                     <a
@@ -104,7 +104,7 @@ const Home: NextPage = () => {
                         >
                             Lanyard Discord
                         </a>{" "}
-                        head to{" "}
+                        go to{" "}
                         <code className="bg-zinc-900 p-1 rounded-md text-lanyard">
                             #kv-commands
                         </code>{" "}
@@ -117,24 +117,24 @@ const Home: NextPage = () => {
                         The website will automatically update with the country's
                         name and flag!
                     </p>
-                    <p className="text-4xl p-4 mt-8">
+                    <p className="text-2xl font-bold text-center mt-4">
+                        More KV's will be supported in the future.
+                    </p>
+                    <p className="text-4xl p-4 mt-8 text-center">
                         Need help? Contact me on Discord{" "}
                     </p>
-                    <Card id="508662064063971348" />
                 </div>
                 <div className="w-full flex flex-col justify-center items-center">
                     <a
                         href="#"
-                        className="flex bottom-4 p-2 px-4 mt-24 lg:mt-0 bg-lanyard hover:bg-lanyard/70 transition-all duration-100 ease-linear text-white text-center font-bold rounded-full items-center"
+                        className="flex bottom-4 p-2 px-4  lg:mt-0 bg-lanyard hover:bg-lanyard/70 transition-all duration-100 ease-linear text-white text-center font-bold rounded-full items-center"
                     >
                         <AiOutlineArrowUp size={36} />
                         To the Top
                     </a>
                 </div>
             </div>
-            <div className="mt-28 lg:mt-0">
-                <Footer />
-            </div>
+            <Footer />
         </div>
     );
 };

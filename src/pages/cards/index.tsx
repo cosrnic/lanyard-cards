@@ -77,8 +77,8 @@ const Cards: NextPage = () => {
                             Generate
                         </button>
                     </div>
+
                     <div className="flex flex-row p-4 mt-24 gap-4">
-                        <Card id="94490510688792576" />
                         <Card id="508662064063971348" />
                     </div>
                 </div>

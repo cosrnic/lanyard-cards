@@ -4,7 +4,6 @@ import { LanyardType } from "../../utils/lanyardType";
 
 export const Location: FC<LanyardType> = ({ id }) => {
     const { status } = useLanyard({ userId: id, socket: true });
-    console.log(status);
     function defaultSRC(e: any) {
         e.target.src = "/images/discord-default.png";
     }
