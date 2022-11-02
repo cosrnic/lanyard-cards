@@ -92,6 +92,7 @@ export const Card: FC<LanyardType> = ({ id, colour }) => {
                                 </div>
                             </div>
                             <a
+                                rel="noreferrer"
                                 className="text-lg bg-zinc-700 p-2 rounded-md hover:bg-zinc-600 mt-4 text-center"
                                 href={`https://discord.com/users/${id}`}
                                 target="_blank"

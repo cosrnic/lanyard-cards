@@ -20,6 +20,7 @@ export const Activity: FC<LanyardType> = ({ id }) => {
                 >
                     <img
                         src={`/images/discord-default.png`}
+                        alt="loading"
                         onError={(e) => defaultSRC(e)}
                         className="flex-row flex m-2 rounded-md h-20 w-20"
                     />
@@ -48,6 +49,7 @@ export const Activity: FC<LanyardType> = ({ id }) => {
                                     : `https://cdn.discordapp.com/emojis/${status.activities[0].emoji?.id}.png`
                             }
                             onError={(e) => defaultSRC(e)}
+                            alt={status.activities[useThisIndex].name}
                             className="flex-row flex m-2 rounded-md h-20 w-20"
                         />
                         <div className="flex flex-col m-2">
@@ -73,6 +75,7 @@ export const Activity: FC<LanyardType> = ({ id }) => {
                                 : `/images/discord-default.png`
                         }
                         onError={(e) => defaultSRC(e)}
+                        alt={status.activities[useThisIndex].name}
                         className="flex-row flex m-2 rounded-md h-20 w-20"
                     />
                     <div className="flex flex-col m-2">
