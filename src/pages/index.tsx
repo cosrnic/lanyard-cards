@@ -126,6 +126,33 @@ const Home: NextPage = () => {
                 </div>
                 <div className="w-full flex flex-col justify-center items-center">
                     <a
+                        href="#what-s-coming"
+                        className="flex bottom-4 p-2 px-4  lg:mt-0 bg-lanyard hover:bg-lanyard/70 transition-all duration-100 ease-linear text-white text-center font-bold rounded-full items-center"
+                    >
+                        <AiOutlineArrowDown size={36} />
+                        What's Coming
+                    </a>
+                </div>
+            </div>
+            <div className="h-screen mt-20" id="what-s-coming">
+                <div className="flex justify-center items-center flex-col h-[90%]">
+                    <p className="text-4xl p-4 text-center">What's Coming</p>
+                    <p className="text-lg font-medium text-center">
+                        <p className="text-xl font-bold">
+                            So far, I have these features planned;
+                        </p>
+                        <br />
+                        Badges
+                        <br />
+                        Accent Colours/Banner Colours
+                        <br />
+                        Connected Accounts
+                        <br />
+                        About Me/Bio
+                    </p>
+                </div>
+                <div className="w-full flex flex-col justify-center items-center">
+                    <a
                         href="#"
                         className="flex bottom-4 p-2 px-4  lg:mt-0 bg-lanyard hover:bg-lanyard/70 transition-all duration-100 ease-linear text-white text-center font-bold rounded-full items-center"
                     >

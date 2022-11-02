@@ -49,7 +49,7 @@ export const Card: FC<LanyardType> = ({ id, colour }) => {
         if (status.discord_status == "idle") colour = "yellow";
         if (status.discord_status == "dnd") colour = "red";
 
-        // TODO: Badges
+        // TODO: Badges, Accent Colours, Connected Accounts, Bio
         // let flags: string[] = getFlags(status.discord_user.public_flags);
         return (
             <div className="grid place-items-center ">
