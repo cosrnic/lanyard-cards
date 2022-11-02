@@ -5,6 +5,7 @@ import { getAvatarURL } from "@/utils/getAvatarURL";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import React from "react";
 import { useLanyard } from "react-use-lanyard";
 
 const Cards: NextPage = () => {
@@ -43,6 +44,28 @@ const Cards: NextPage = () => {
                             : ``
                     }
                 />
+                <meta
+                    property="og:title"
+                    content={
+                        status && status2
+                            ? status.discord_user && status2.discord_user
+                                ? `${status.discord_user.username}'s card | Lanyard Cards`
+                                : `${status2.discord_user.username}'s card | Lanyard Cards`
+                            : ``
+                    }
+                />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="http://cards.cosrnic.uk" />
+                <meta
+                    property="og:image"
+                    content={getAvatarURL(id.toString())}
+                />
+                <meta
+                    property="og:description"
+                    content="Lanyard by Phineas, Website by Cosmic"
+                />
+                <meta name="theme-color" content="#D7BB87" />
+                <meta name="twitter:card" content="summary_large_image" />
             </Head>
             <Navbar />
             <div className="h-screen ">

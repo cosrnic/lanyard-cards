@@ -6,6 +6,7 @@ import { getAvatarURL } from "@/utils/getAvatarURL";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Router from "next/router";
+import React from "react";
 import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -35,17 +36,33 @@ const Cards: NextPage = () => {
             pathname: `/cards/${value}`,
         });
     }
+    const [hydrated, setHydrated] = React.useState(false);
+    React.useEffect(() => {
+        setHydrated(true);
+    }, []);
+    if (!hydrated) {
+        return null;
+    }
     return (
         <div className="w-full h-screen ">
             <Head>
-                <title>Lanyard Cards</title>
+                <title>Generate | Lanyard Cards</title>
                 <link
                     rel="icon"
                     type="image/png"
                     sizes="16x16"
-                    href={getAvatarURL("508662064063971348")}
-                    onError={(e) => defaultSRC(e)}
+                    href="/images/pfp.png"
                 />
+                <meta property="og:title" content="Generate | Lanyard Cards" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="http://cards.cosrnic.uk" />
+                <meta property="og:image" content="/images/pfp.png" />
+                <meta
+                    property="og:description"
+                    content="Lanyard by Phineas, Website by Cosmic"
+                />
+                <meta name="theme-color" content="#D7BB87" />
+                <meta name="twitter:card" content="summary_large_image" />
             </Head>
             <Navbar />
             <div className="h-screen">

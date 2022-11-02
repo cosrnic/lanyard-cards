@@ -3,10 +3,18 @@ import { Navbar } from "@/components/Navbar";
 import { getAvatarURL } from "@/utils/getAvatarURL";
 import type { NextPage } from "next";
 import Head from "next/head";
+import React from "react";
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 import { Card } from "../components/Card";
 
 const Home: NextPage = () => {
+    const [hydrated, setHydrated] = React.useState(false);
+    React.useEffect(() => {
+        setHydrated(true);
+    }, []);
+    if (!hydrated) {
+        return null;
+    }
     return (
         <div className="w-full h-screen ">
             <Head>
@@ -15,8 +23,18 @@ const Home: NextPage = () => {
                     rel="icon"
                     type="image/png"
                     sizes="16x16"
-                    href={getAvatarURL("508662064063971348")}
+                    href="/images/pfp.png"
                 />
+                <meta property="og:title" content="Lanyard Cards" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="http://cards.cosrnic.uk" />
+                <meta property="og:image" content="/images/pfp.png" />
+                <meta
+                    property="og:description"
+                    content="Lanyard by Phineas, Website by Cosmic"
+                />
+                <meta name="theme-color" content="#D7BB87" />
+                <meta name="twitter:card" content="summary_large_image" />
             </Head>
             <Navbar />
             <div className="h-screen ">
@@ -71,7 +89,7 @@ const Home: NextPage = () => {
             <div className="h-screen mt-20" id="how-to-use">
                 <div className="flex justify-center items-center flex-col h-[90%]">
                     <p className="text-4xl p-4 text-center">How to use it</p>
-                    <p className="text-lg font-medium text-center">
+                    <div className="text-lg font-medium text-center">
                         Firstly, Join the{" "}
                         <a
                             className="text-lanyard hover:underline transition-all duration-300 ease-linear"
@@ -81,7 +99,7 @@ const Home: NextPage = () => {
                             Lanyard Discord
                         </a>{" "}
                         server.
-                    </p>
+                    </div>
                     <p className="text-lg font-medium text-center">
                         Secondly,{" "}
                         <a
