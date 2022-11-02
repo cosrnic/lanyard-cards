@@ -21,6 +21,16 @@ export default function Document() {
                     sizes="16x16"
                     href={getAvatarURL("508662064063971348")}
                 />
+                <meta property="og:title" content="Lanyard Cards" />
+                <meta property="og:type" content="website" />
+                <meta property="og:url" content="http://cards.cosrnic.uk" />
+                <meta property="og:image" content="/images/pfp.png" />
+                <meta
+                    property="og:description"
+                    content="Lanyard by Phineas, Website by Cosmic"
+                />
+                <meta name="theme-color" content="#D7BB87" />
+                <meta name="twitter:card" content="summary_large_image" />
             </Head>
             <body>
                 <Main />
