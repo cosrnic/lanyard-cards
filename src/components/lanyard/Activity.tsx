@@ -1,12 +1,10 @@
+import defaultSRC from "@/utils/defaultSRC";
 import { FC } from "react";
 import { useLanyard } from "react-use-lanyard";
 import { LanyardType } from "../../utils/lanyardType";
 
 export const Activity: FC<LanyardType> = ({ id }) => {
     const { status } = useLanyard({ userId: id, socket: true });
-    function defaultSRC(e: any) {
-        e.target.src = "/images/discord-default.png";
-    }
 
     let useThisIndex = 0;
     const getActivity = () => {
