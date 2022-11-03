@@ -6,6 +6,7 @@ import { FC } from "react";
 import { LanyardType } from "../utils/lanyardType";
 import { useLanyard } from "react-use-lanyard";
 import { Navbar } from "./Navbar";
+import { Badges } from "./lanyard/Badges";
 
 export const Card: FC<LanyardType> = ({ id, colour }) => {
     const { status } = useLanyard({ userId: id, socket: true });
@@ -51,8 +52,7 @@ export const Card: FC<LanyardType> = ({ id, colour }) => {
         if (status.discord_status == "idle") colour = "yellow";
         if (status.discord_status == "dnd") colour = "red";
 
-        // TODO: Badges, Accent Colours, Connected Accounts, Bio
-        // let flags: string[] = getFlags(status.discord_user.public_flags);
+        // TODO: Accent Colours, Connected Accounts, Bio
         return (
             <div className="grid place-items-center ">
                 {/* appears white if this isn't done for some reason */}
@@ -74,8 +74,11 @@ export const Card: FC<LanyardType> = ({ id, colour }) => {
                                         <div className="">
                                             <Name id={id} />
                                         </div>
+                                        <div className="flex flex-row w-40 flex-wrap gap-[3px]">
+                                            <Badges id={id} />
+                                        </div>
                                     </div>
-                                    <div className="text-right">
+                                    <div className="pl-4 text-right">
                                         <Location id={id} />
                                     </div>
                                 </div>

@@ -169,13 +169,10 @@ const Home: NextPage = () => {
                             So far, I have these features planned;
                         </p>
                         <br />
-                        Badges
-                        <br />
-                        Accent Colours/Banner Colours
-                        <br />
-                        Connected Accounts
-                        <br />
-                        About Me/Bio
+                        <p className="line-through">Badges</p>
+                        <p>Accent Colours/Banner Colours</p>
+                        <p>Connected Accounts</p>
+                        <p>About Me/Bio</p>
                     </p>
                 </div>
                 <div className="w-full flex flex-col justify-center items-center">
