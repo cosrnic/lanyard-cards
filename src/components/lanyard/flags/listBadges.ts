@@ -5,7 +5,7 @@ export const listBadges: any = {
     "Early Supporter": "/images/flags/Early_Supporter.png",
     "Early Verified Bot Developer":
         "/images/flags/Early_Verified_Bot_Developer.png",
-    "HypeSquad Balance": "//images/flags/House_Balance.png",
+    "HypeSquad Balance": "/images/flags/House_Balance.png",
     "HypeSquad Bravery": "/images/flags/House_Bravery.png",
     "HypeSquad Brilliance": "/images/flags/House_Brilliance.png",
     "HypeSquad Events": "/images/flags/HypeSquad_Events.png",

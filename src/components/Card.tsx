@@ -74,9 +74,6 @@ export const Card: FC<LanyardType> = ({ id, colour }) => {
                                         <div className="">
                                             <Name id={id} />
                                         </div>
-                                        <div className="flex flex-row w-40 flex-wrap gap-[3px]">
-                                            <Badges id={id} />
-                                        </div>
                                     </div>
                                     <div className="pl-4 text-right">
                                         <Location id={id} />
@@ -84,6 +81,9 @@ export const Card: FC<LanyardType> = ({ id, colour }) => {
                                 </div>
                             </div>
                             <div className="mt-4">
+                                <div className="flex flex-row gap-[3px] mb-4 justify-center">
+                                    <Badges id={id} />
+                                </div>
                                 <div className="flex flex-col gap-4">
                                     <div>
                                         <div

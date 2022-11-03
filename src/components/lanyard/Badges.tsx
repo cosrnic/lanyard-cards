@@ -1,4 +1,3 @@
-import { Tooltip } from "flowbite-react";
 import { FC } from "react";
 import { useLanyard } from "react-use-lanyard";
 import { LanyardType } from "../../utils/lanyardType";
@@ -22,16 +21,17 @@ export const Badges: FC<LanyardType> = ({ id }) => {
     return (
         <>
             {flags.map((flag) => (
-                <>
-                    <Tooltip
-                        content={flag}
-                        className="bg-zinc-700"
-                        arrow={false}
-                        style="dark"
-                    >
+                <div key={flag}>
+                    <div className="group flex relative">
                         <img src={listBadges[flag]} width={28} />
-                    </Tooltip>
-                </>
+                        <div
+                            className="group-hover:opacity-100 transition-opacity bg-zinc-700 px-2 py-1 text-sm text-white rounded-md absolute left-1/2 
+    -translate-x-1/2 -translate-y-[150%] opacity-0 m-4 mx-auto text-center"
+                        >
+                            {flag}
+                        </div>
+                    </div>
+                </div>
             ))}
         </>
     );

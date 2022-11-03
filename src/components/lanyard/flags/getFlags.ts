@@ -25,7 +25,7 @@ export const getFlags = (flag: number): string[] => {
     // flags.push("Early Verified Bot Developer");
     // flags.push("Discord Certified Moderator");
 
-    console.log(flags);
+    // console.log(flags);
 
     return flags;
 };
