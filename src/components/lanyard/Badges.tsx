@@ -25,8 +25,9 @@ export const Badges: FC<LanyardType> = ({ id }) => {
                 <>
                     <Tooltip
                         content={flag}
-                        className="bg-zinc-700 "
+                        className="bg-zinc-700"
                         arrow={false}
+                        style="dark"
                     >
                         <img src={listBadges[flag]} width={28} />
                     </Tooltip>
