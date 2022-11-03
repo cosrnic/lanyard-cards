@@ -1,14 +1,16 @@
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { getAvatarURL } from "@/utils/getAvatarURL";
+import axios from "axios";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AiOutlineArrowDown, AiOutlineArrowUp } from "react-icons/ai";
 import { Card } from "../components/Card";
 
 const Home: NextPage = () => {
+    const id = "508662064063971348";
     const [hydrated, setHydrated] = React.useState(false);
     React.useEffect(() => {
         setHydrated(true);
@@ -16,6 +18,7 @@ const Home: NextPage = () => {
     if (!hydrated) {
         return null;
     }
+
     return (
         <div className="w-full h-screen ">
             <Head>
@@ -77,7 +80,7 @@ const Home: NextPage = () => {
             <div className="h-screen " id="what-it-looks-like">
                 <div className="flex justify-center items-center flex-col h-[90%]">
                     <p className="text-4xl p-4">What it looks like</p>
-                    <Card id="508662064063971348" />
+                    <Card id={id} />
                     <p className="italic">updates in real time</p>
                 </div>
                 <div className="w-full flex flex-col justify-center items-center">

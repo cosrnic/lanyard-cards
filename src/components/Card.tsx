@@ -2,16 +2,37 @@ import { Avatar } from "./lanyard/Avatar";
 import { Name } from "./lanyard/Name";
 import { Activity } from "./lanyard/Activity";
 import { Location } from "./lanyard/Location";
-import { FC } from "react";
+import { FC, useEffect, useState } from "react";
 import { LanyardType } from "../utils/lanyardType";
 import { useLanyard } from "react-use-lanyard";
-import { Navbar } from "./Navbar";
 import { Badges } from "./lanyard/Badges";
+import axios from "axios";
 
 export const Card: FC<LanyardType> = ({ id, colour }) => {
     const { status } = useLanyard({ userId: id, socket: true });
 
+    const [data, setData] = useState<any | null>(null);
+
+    useEffect(() => {
+        async function fetchData(id: string) {
+            await axios
+                .get("https://dcdn.dstn.to/profile/" + id)
+                .then((result) => {
+                    return setData(result.data);
+                });
+        }
+        fetchData(id);
+    }, [id]);
+
     if (!status) {
+        return (
+            <div className="flex flex-col justify-center items-center h-screen w-full">
+                <h1 className="text-4xl font-black">Loading...</h1>
+            </div>
+        );
+    }
+
+    if (data == null) {
         return (
             <div className="flex flex-col justify-center items-center h-screen w-full">
                 <h1 className="text-4xl font-black">Loading...</h1>
@@ -45,6 +66,7 @@ export const Card: FC<LanyardType> = ({ id, colour }) => {
             </div>
         );
     } else {
+        let accent = data.user.banner_color;
         // colours to pass into Avatar.tsx and border
         let colour;
         if (status.discord_status == "online") colour = "green";
@@ -62,7 +84,8 @@ export const Card: FC<LanyardType> = ({ id, colour }) => {
                 <div className="border-yellow-500 shadow-yellow-500"></div>
                 <div className="min-w-[19rem]">
                     <div
-                        className={`grid-4 p-5 min-h-[13rem] border-2 border-${colour}-500 bg-zinc-800 rounded-md  transition-all shadow-[0px_0px_32px_0px_rgba(0,0,0,0.1)]`}
+                        style={{ borderColor: accent }}
+                        className={`grid-4 p-5 min-h-[13rem] border-2 bg-zinc-800 rounded-md  transition-all shadow-[0px_0px_32px_0px_rgba(0,0,0,0.1)]`}
                     >
                         <div className="flex flex-col">
                             <div className="flex flex-col gap-2">
@@ -96,7 +119,10 @@ export const Card: FC<LanyardType> = ({ id, colour }) => {
                             </div>
                             <a
                                 rel="noreferrer"
-                                className="text-lg bg-zinc-700 p-2 rounded-md hover:bg-zinc-600 mt-4 text-center"
+                                style={{
+                                    backgroundColor: accent,
+                                }}
+                                className="text-lg [text-shadow:0px_0px_5px_#000]  p-2 rounded-lg hover:rounded-none mt-4 text-center transition-all duration-75 ease-linear"
                                 href={`https://discord.com/users/${id}`}
                                 target="_blank"
                             >

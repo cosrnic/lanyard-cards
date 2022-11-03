@@ -2,10 +2,11 @@ import { Card } from "@/components/Card";
 import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import { getAvatarURL } from "@/utils/getAvatarURL";
+import axios from "axios";
 import type { NextPage } from "next";
 import Head from "next/head";
 import { useRouter } from "next/router";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useLanyard } from "react-use-lanyard";
 
 const Cards: NextPage = () => {
@@ -17,6 +18,22 @@ const Cards: NextPage = () => {
     }
     const { status } = useLanyard({ userId: id, socket: true });
     const { status: status2 } = useLanyard({ userId: cosmicID, socket: true });
+    const [data, setData] = useState<any | null>(null);
+
+    // useEffect(() => {
+    //     async function fetchData(id: string) {
+    //         await axios
+    //             .get("https://dcdn.dstn.to/profile/" + id)
+    //             .then((result) => {
+    //                 return setData(result.data);
+    //             });
+    //     }
+    //     fetchData(id.toString());
+    // }, [id]);
+
+    // if (data == null) {
+    //     return <></>;
+    // }
     return (
         <div className="w-full h-screen ">
             <Head>

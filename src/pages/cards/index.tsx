@@ -3,11 +3,12 @@ import { Footer } from "@/components/Footer";
 import { Navbar } from "@/components/Navbar";
 import defaultSRC from "@/utils/defaultSRC";
 import { getAvatarURL } from "@/utils/getAvatarURL";
+import axios from "axios";
 import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import Router from "next/router";
-import React from "react";
+import React, { useEffect } from "react";
 import { useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -37,6 +38,8 @@ const Cards: NextPage = () => {
             pathname: `/cards/${value}`,
         });
     }
+    const id = "508662064063971348";
+
     const [hydrated, setHydrated] = React.useState(false);
     React.useEffect(() => {
         setHydrated(true);
