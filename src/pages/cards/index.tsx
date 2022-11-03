@@ -69,9 +69,9 @@ const Cards: NextPage = () => {
                 <meta name="twitter:card" content="summary_large_image" />
             </Head>
             <Navbar />
-            <div className="h-screen">
+            <div className="h-screen overflow-x-hidden">
                 <div className="flex flex-col justify-center items-center h-[90%]">
-                    <p className="text-lanyard text-6xl font-black text-center">
+                    <p className="text-lanyard text-6xl mt-60 xl:mt-0 font-black text-center">
                         Lanyard Cards
                     </p>
                     <p className="text-3xl font-bold pt-4">
@@ -107,7 +107,9 @@ const Cards: NextPage = () => {
                     </div>
                 </div>
 
-                <Footer />
+                <div className="mt-40 xl:mt-0">
+                    <Footer />
+                </div>
             </div>
             <ToastContainer
                 position="top-center"
