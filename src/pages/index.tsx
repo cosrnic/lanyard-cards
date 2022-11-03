@@ -178,7 +178,7 @@ const Home: NextPage = () => {
                         </p>
                         <p>Connected Accounts</p>
                         <p>About Me/Bio</p>
-                        <p>Spotify [now playing + duration of long]</p>
+                        <p>Spotify [now playing + duration of song]</p>
                     </p>
                 </div>
                 <div className="w-full flex flex-col justify-center items-center">
