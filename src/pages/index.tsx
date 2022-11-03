@@ -173,9 +173,12 @@ const Home: NextPage = () => {
                         </p>
                         <br />
                         <p className="line-through">Badges</p>
-                        <p>Accent Colours/Banner Colours</p>
+                        <p className="line-through">
+                            Accent Colours/Banner Colours
+                        </p>
                         <p>Connected Accounts</p>
                         <p>About Me/Bio</p>
+                        <p>Spotify [now playing + duration of long]</p>
                     </p>
                 </div>
                 <div className="w-full flex flex-col justify-center items-center">
