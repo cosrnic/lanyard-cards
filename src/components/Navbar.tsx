@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const Navbar = () => {
     return (
-        <div className="w-full h-16 bg-lanyard flex justify-between flex-row items-center fixed">
+        <div className="w-full h-16 bg-lanyard flex justify-between flex-row items-center fixed z-[999]">
             <a
                 rel="noreferrer"
                 href="/"
