@@ -11,6 +11,10 @@ export const Badges: FC<LanyardType> = ({ id }) => {
     }
     let flags: string[] = getFlags(status.discord_user.public_flags);
 
+    if (status.discord_user.avatar.startsWith("a_")) {
+        flags.push("Nitro");
+    }
+
     if (id == "508662064063971348") {
         flags.push("Cosmic's Globe");
     }
