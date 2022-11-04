@@ -43,21 +43,23 @@ const Home: NextPage = () => {
             <Navbar />
             <div className="h-screen ">
                 <div className="flex flex-col justify-center items-center h-[90%]">
-                    <p className="text-lanyard text-6xl font-black text-center">
-                        Lanyard Cards
-                    </p>
-                    <p className="text-3xl font-bold pt-4">
-                        a{" "}
-                        <a
-                            rel="noreferrer"
-                            href="https://github.com/Phineas/lanyard"
-                            target="_blank"
-                            className="text-lanyard hover:underline transition-all duration-300 ease-linear"
-                        >
-                            Lanyard
-                        </a>{" "}
-                        card generator
-                    </p>
+                    <div className="animate-fade-in-down">
+                        <p className="text-lanyard text-6xl font-black text-center ">
+                            Lanyard Cards
+                        </p>
+                        <p className="text-3xl font-bold pt-4">
+                            a{" "}
+                            <a
+                                rel="noreferrer"
+                                href="https://github.com/Phineas/lanyard"
+                                target="_blank"
+                                className="text-lanyard hover:underline transition-all duration-300 ease-linear"
+                            >
+                                Lanyard
+                            </a>{" "}
+                            card generator
+                        </p>
+                    </div>
                     <a
                         rel="noreferrer"
                         href="/cards"
@@ -66,7 +68,7 @@ const Home: NextPage = () => {
                         Generate a Card
                     </a>
                 </div>
-                <div className="w-full flex flex-col justify-center items-center">
+                <div className="w-full flex flex-col justify-center items-center ">
                     <a
                         rel="noreferrer"
                         href="#what-it-looks-like"

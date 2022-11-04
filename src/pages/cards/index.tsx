@@ -38,7 +38,6 @@ const Cards: NextPage = () => {
             pathname: `/cards/${value}`,
         });
     }
-    const id = "508662064063971348";
 
     const [hydrated, setHydrated] = React.useState(false);
     React.useEffect(() => {
@@ -71,21 +70,23 @@ const Cards: NextPage = () => {
             <Navbar />
             <div className="h-screen overflow-x-hidden">
                 <div className="flex flex-col justify-center items-center h-[90%]">
-                    <p className="text-lanyard text-6xl mt-60 xl:mt-0 font-black text-center">
-                        Lanyard Cards
-                    </p>
-                    <p className="text-3xl font-bold pt-4">
-                        a{" "}
-                        <a
-                            rel="noreferrer"
-                            href="https://github.com/Phineas/lanyard"
-                            target="_blank"
-                            className="text-lanyard hover:underline transition-all duration-300 ease-linear"
-                        >
-                            Lanyard
-                        </a>{" "}
-                        card generator
-                    </p>
+                    <div className="animate-fade-in-down">
+                        <p className="text-lanyard text-6xl mt-60 xl:mt-0 font-black text-center">
+                            Lanyard Cards
+                        </p>
+                        <p className="text-3xl font-bold pt-4">
+                            a{" "}
+                            <a
+                                rel="noreferrer"
+                                href="https://github.com/Phineas/lanyard"
+                                target="_blank"
+                                className="text-lanyard hover:underline transition-all duration-300 ease-linear"
+                            >
+                                Lanyard
+                            </a>{" "}
+                            card generator
+                        </p>
+                    </div>
                     <div className="gap-2 items-center flex mt-8">
                         <input
                             className="bg-lanyard rounded-md outline-none p-2 w-64 h-11 focus:border-white border-2 border-transparent transition-all duration-100 ease-linear font-bold"
