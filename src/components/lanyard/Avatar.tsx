@@ -1,3 +1,4 @@
+import defaultSRC from "@/utils/defaultSRC";
 import { FC } from "react";
 import { useLanyard } from "react-use-lanyard";
 import { LanyardType } from "../../utils/lanyardType";
@@ -36,6 +37,7 @@ export const Avatar: FC<LanyardType> = ({ id, colour }) => {
                         }
                         width="64"
                         height="64"
+                        onError={(e) => defaultSRC(e)}
                     ></img>
                 </div>
             );
