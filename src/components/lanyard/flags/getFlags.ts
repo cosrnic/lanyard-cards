@@ -12,6 +12,7 @@ export const getFlags = (flag: number): string[] => {
     if (flag & 16384) flags.push("Level 2 Bug Hunter");
     if (flag & 131072) flags.push("Early Verified Bot Developer");
     if (flag & 262144) flags.push("Discord Certified Moderator");
+    if (flag & 4194304) flags.push("Active Developer");
 
     // flags.push("Discord Staff");
     // flags.push("Partnered Server Owner");
@@ -24,6 +25,7 @@ export const getFlags = (flag: number): string[] => {
     // flags.push("Golden Discord Bug Hunter");
     // flags.push("Early Verified Bot Developer");
     // flags.push("Discord Certified Moderator");
+    // flags.push("Active Developer");
 
     // console.log(flags);
 

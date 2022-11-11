@@ -13,6 +13,7 @@ export const listBadges: any = {
     Nitro: "/images/flags/Nitro.png",
     "Discord Certified Moderator":
         "/images/flags/Discord_Certified_Moderator.png",
+    "Active Developer": "/images/flags/Active_Developer.png",
     "Cosmic's Globe": "/images/flags/Cosmic_Globe.png",
     "Lanyard Dev": "/images/flags/Lanyard_Dev.png",
 };
