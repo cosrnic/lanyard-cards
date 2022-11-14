@@ -152,6 +152,23 @@ const Home: NextPage = () => {
                         More KV's will be supported in the future.
                     </p>
                     <p className="text-4xl p-4 mt-8 text-center">
+                        Want to embed this onto your website?
+                    </p>
+                    <p className="text-lg font-medium text-center">
+                        The url for the iFrame is <br />
+                        <code className="bg-zinc-900 p-1 rounded-md text-lanyard">
+                            https://lanyard-cards.cosrnic.uk/cards/iframe/(id)
+                        </code>{" "}
+                        <br />
+                        The recommended settings for the iFrame are <br />
+                        <code className="bg-zinc-900 p-1 rounded-md text-lanyard">
+                            {"<iframe "}
+                            src="https://lanyard-cards.cosrnic.uk/cards/iframe/(id)"
+                            width="420px" height="375px"
+                            {" />"}
+                        </code>
+                    </p>
+                    <p className="text-4xl p-4 mt-8 text-center">
                         Need help? Contact me on Discord{" "}
                     </p>
                 </div>
@@ -166,6 +183,7 @@ const Home: NextPage = () => {
                     </a>
                 </div>
             </div>
+
             <div className="h-screen mt-20" id="what-s-coming">
                 <div className="flex justify-center items-center flex-col h-[90%]">
                     <p className="text-4xl p-4 text-center">What's Coming</p>
@@ -178,6 +196,7 @@ const Home: NextPage = () => {
                         <p className="line-through">
                             Accent Colours/Banner Colours
                         </p>
+                        <p className="line-through">iFrame</p>
                         <p>Connected Accounts</p>
                         <p>About Me/Bio</p>
                         <p>Spotify [now playing + duration of song]</p>

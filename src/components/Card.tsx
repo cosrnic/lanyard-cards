@@ -85,7 +85,7 @@ export const Card: FC<LanyardType> = ({ id, colour }) => {
                 <div className="min-w-[19rem]">
                     <div
                         style={{ borderColor: accent }}
-                        className={`grid-4 p-5 min-h-[13rem] border-2 bg-zinc-800 rounded-md  transition-all shadow-[0px_0px_32px_0px_rgba(0,0,0,0.1)]`}
+                        className={`grid-4 p-5 min-h-[13rem] border-2  rounded-md  transition-all shadow-[0px_0px_32px_0px_rgba(0,0,0,0.1)]`}
                     >
                         <div className="flex flex-col">
                             <div className="flex flex-col gap-2">
